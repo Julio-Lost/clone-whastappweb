@@ -1,3 +1,8 @@
+#Whatsapp Web Clone
+Esse projeto foi feito com o intuito de aprendizado, utilizando React.
+
+Nesse projeto foi utilizado os seguintes pacotes: Firebase, Material-Ui, Emoji-picker-react e Styled Components.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
