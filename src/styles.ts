@@ -1,12 +1,82 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
+import { Colors } from "./constants";
 
-export const Div = styled.div`
-background: transparent;
-border-radius: 3px;
-border: 2px solid palevioletred;
-color: palevioletred;
-margin: 0.5em 1em;
-padding: 0.25em 1em;
+export const GlobalStyle = createGlobalStyle`
+* {
+    box-sizing: border-box;
+ }
+body {
+    margin: 0;
+    background-color: ${Colors.backgroundColorBody};
+    font-family: 'Segoe UI', Arial, Helvetica Neue, Helvetica, Lucida Grande
+  }
 `;
 
-export const AppWindow=styled.div``;
+export const AppWindow = styled.div`
+  display: flex;
+  height: 100vh;
+  background-color: ${Colors.backgroundColorAppWindow};
+`;
+
+export const SideBar = styled.div`
+  width: 35%;
+  max-width: 415px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+`;
+
+export const ContentArea = styled.div``;
+
+export const Header = styled.header`
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+`;
+
+export const ChatList = styled.div``;
+
+export const HeaderAvatar = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+`;
+
+export const HeaderButton = styled.div`
+  display: flex;
+`;
+
+export const HeaderBtn = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const Search = styled.div`
+  background-color: ${Colors.backgroundColorSearch};
+  border-bottom: 1px solid #eee;
+  padding: 5px 15px;
+`;
+
+export const SearchInput = styled.div`
+  background-color: ${Colors.white};
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+`;
+export const InputSearch = styled.input`
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  margin-left: 10px;
+`;
