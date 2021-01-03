@@ -26,7 +26,9 @@ export const SideBar = styled.div`
   border-right: 1px solid #ddd;
 `;
 
-export const ContentArea = styled.div``;
+export const ContentArea = styled.div`
+  flex: 1;
+`;
 
 export const Header = styled.header`
   height: 60px;

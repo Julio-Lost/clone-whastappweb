@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Colors } from "../../../constants";
 
-export const ChatListItem = styled.div`
+export const ChatListItem = styled.div<{ active: boolean }>`
   display: flex;
   cursor: pointer;
   align-items: center;
   height: 70px;
+  background-color: ${(props) => props.active && Colors.chatListActiveChat};
 
   &:hover {
     background-color: ${Colors.hoverChatList};

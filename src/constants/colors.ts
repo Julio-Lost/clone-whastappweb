@@ -5,4 +5,6 @@ export const Colors = {
   colorIcons: "#919191",
   backgroundColorSearch: "#F6F6F6",
   hoverChatList: "#F5F5F5",
+  chatIntroBackgroundColor: "#F8F9FA",
+  chatListActiveChat: "#EBEBEB",
 };

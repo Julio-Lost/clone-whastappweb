@@ -1,16 +1,19 @@
 import React from "react";
 import * as S from "./styles";
 
-export const ChatLisItem = () => {
+interface ChatListItemProps {
+  onClick: any;
+  active: boolean;
+  data: any;
+}
+
+export const ChatLisItem = ({ onClick, active, data }: ChatListItemProps) => {
   return (
-    <S.ChatListItem>
-      <S.ChatListItemAvatar
-        src="https://www.w3schools.com/howto/img_avatar2.png"
-        alt=""
-      />
+    <S.ChatListItem onClick={onClick} active={active}>
+      <S.ChatListItemAvatar src={data.avatar} alt="" />
       <S.ChatListItemLines>
         <S.ChatLisItemtLine>
-          <S.ChatListItemName>Julio Cesar</S.ChatListItemName>
+          <S.ChatListItemName>{data.title}</S.ChatListItemName>
           <S.ChatListItemDate>19:00</S.ChatListItemDate>
         </S.ChatLisItemtLine>
         <S.ChatLisItemtLine>
