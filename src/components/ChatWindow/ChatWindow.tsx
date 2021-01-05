@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
 import { Colors } from "../../constants";
+
+import EmojiPicker from "emoji-picker-react";
 
 import SearchIcon from "@material-ui/icons/Search";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
@@ -11,6 +13,17 @@ import SendIcon from "@material-ui/icons/Send";
 import MicIcon from "@material-ui/icons/Mic";
 
 export const ChatWindow = () => {
+  const [emojiOpen, setEmojiOpen] = useState(false);
+
+  const handleEmojiClick = () => {};
+
+  const handleOpenEmoji = () => {
+    setEmojiOpen(true);
+  };
+
+  const handleCloseEmoji = () => {
+    setEmojiOpen(false);
+  };
   return (
     <S.ChatWindow>
       <S.ChatWindowHeader>
@@ -37,10 +50,29 @@ export const ChatWindow = () => {
 
       <S.ChatWindowBody></S.ChatWindowBody>
 
+      <S.ChatWindowEmojiArea emojiOpen={emojiOpen}>
+        <EmojiPicker
+          disableSearchBar
+          disableSkinTonePicker
+          onEmojiClick={handleEmojiClick}
+        />
+      </S.ChatWindowEmojiArea>
+
       <S.ChatWindowFooter>
         <S.ChatWindowFooterPre>
+          <S.ChatWindowBtn style={{ width: emojiOpen ? "40px" : "0px" }}>
+            <CloseIcon
+              style={{ color: Colors.colorIcons }}
+              onClick={handleCloseEmoji}
+            />
+          </S.ChatWindowBtn>
           <S.ChatWindowBtn>
-            <InsertEmoticonIcon style={{ color: Colors.colorIcons }} />
+            <InsertEmoticonIcon
+              style={{
+                color: emojiOpen ? Colors.colorSelectIcons : Colors.colorIcons,
+              }}
+              onClick={handleOpenEmoji}
+            />
           </S.ChatWindowBtn>
         </S.ChatWindowFooterPre>
 

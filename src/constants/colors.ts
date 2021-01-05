@@ -7,4 +7,5 @@ export const Colors = {
   hoverChatList: "#F5F5F5",
   chatIntroBackgroundColor: "#F8F9FA",
   chatListActiveChat: "#EBEBEB",
+  colorSelectIcons: "#009688",
 };

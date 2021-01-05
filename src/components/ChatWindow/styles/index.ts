@@ -41,13 +41,15 @@ export const ChatWindowHeaderButtons = styled.div`
 `;
 
 export const ChatWindowBtn = styled.div`
-  width: 40px;
+  width: "40px";
   height: 40px;
   border-radius: 500%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
+  transition: all ease 0.3s;
 `;
 
 export const ChatWindowBody = styled.div`
@@ -57,6 +59,20 @@ export const ChatWindowBody = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+`;
+
+export const ChatWindowEmojiArea = styled.div<{ emojiOpen: boolean }>`
+  height: ${(props) => (props.emojiOpen ? "200px" : "0px")};
+  overflow-y: hidden;
+  transition: all ease 0.3s;
+
+  > aside.emoji-picker-react {
+    width: auto;
+    background: none;
+  }
+  > .emoji-picker-react .emoji-group:before {
+    background: none;
+  }
 `;
 
 export const ChatWindowFooter = styled.div`
