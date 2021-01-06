@@ -26,7 +26,7 @@ export const ChatListItemLines = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid ${Colors.graySearch};
   padding-right: 15px;
   margin-left: 15px;
 
@@ -43,17 +43,17 @@ export const ChatLisItemtLine = styled.div`
 
 export const ChatListItemName = styled.div`
   font-size: 17px;
-  color: #000;
+  color: ${Colors.black};
 `;
 
 export const ChatListItemDate = styled.div`
   font-size: 12px;
-  color: #999;
+  color: ${Colors.grayChatList};
 `;
 
 export const ChatListItemLastMsg = styled.div`
   font-size: 14px;
-  color: #999;
+  color: ${Colors.grayChatList};
   display: flex;
   width: 100%;
 `;

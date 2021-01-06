@@ -9,7 +9,7 @@ export const ChatWindow = styled.div`
 
 export const ChatWindowHeader = styled.div`
   height: 60px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid ${Colors.grayChatWindow};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ export const ChatWindowHeaderInfoImage = styled.img`
 
 export const ChatWindowHeaderName = styled.div`
   font-size: 17px;
-  color: #000;
+  color: ${Colors.black};
 `;
 
 export const ChatWindowHeaderButtons = styled.div`
@@ -55,7 +55,7 @@ export const ChatWindowBtn = styled.div`
 export const ChatWindowBody = styled.div`
   flex: 1;
   overflow-y: auto;
-  background-color: #e5ddd5;
+  background-color: ${Colors.grayChatWindowBody};
   background-size: cover;
   background-position: center;
   background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
@@ -98,7 +98,7 @@ export const ChatWindowFooterInput = styled.input`
   background-color: ${Colors.white};
   border-radius: 20px;
   font-size: 15px;
-  color: #4a4a4a;
+  color: ${Colors.grayFooter};
   padding-left: 15px;
 `;
 

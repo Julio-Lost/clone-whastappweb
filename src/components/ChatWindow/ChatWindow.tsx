@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as S from "./styles";
 import { Colors } from "../../constants";
 
-import EmojiPicker from "emoji-picker-react";
+import EmojiPicker, { IEmojiData } from "emoji-picker-react";
 
 import SearchIcon from "@material-ui/icons/Search";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
@@ -12,10 +12,47 @@ import CloseIcon from "@material-ui/icons/Close";
 import SendIcon from "@material-ui/icons/Send";
 import MicIcon from "@material-ui/icons/Mic";
 
-export const ChatWindow = () => {
-  const [emojiOpen, setEmojiOpen] = useState(false);
+declare global {
+  interface Window {
+    webkitSpeechRecognition: any;
+  }
+}
 
-  const handleEmojiClick = () => {};
+export const ChatWindow = () => {
+  const [emojiOpen, setEmojiOpen] = useState<boolean>(false);
+  const [text, setText] = useState("");
+  const [listening, setListening] = useState<boolean>(false);
+
+  let recognition: SpeechRecognition | null = null;
+
+  let SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+  }
+
+  const handleEmojiClick = (e: any, emojiData: IEmojiData) => {
+    setText(text + emojiData.emoji);
+  };
+
+  const handleSendClick = () => {};
+
+  const handleMicClick = () => {
+    if (recognition) {
+      recognition.onstart = () => {
+        setListening(true);
+      };
+      recognition.onend = () => {
+        setListening(false);
+      };
+      recognition.onresult = (e: any) => {
+        setText(e.results[0][0].transcript);
+      };
+
+      recognition.start();
+    }
+  };
 
   const handleOpenEmoji = () => {
     setEmojiOpen(true);
@@ -80,13 +117,27 @@ export const ChatWindow = () => {
           <S.ChatWindowFooterInput
             type="text"
             placeholder="Digite uma mensagem"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           />
         </S.ChatWindowFooterInputArea>
 
         <S.ChatWindowFooterPos>
-          <S.ChatWindowBtn>
-            <SendIcon style={{ color: Colors.colorIcons }} />
-          </S.ChatWindowBtn>
+          {!text && (
+            <S.ChatWindowBtn onClick={handleMicClick}>
+              <MicIcon
+                style={{
+                  color: listening ? Colors.micActiveColor : Colors.colorIcons,
+                }}
+              />
+            </S.ChatWindowBtn>
+          )}
+
+          {text && (
+            <S.ChatWindowBtn onClick={handleSendClick}>
+              <SendIcon style={{ color: Colors.colorIcons }} />
+            </S.ChatWindowBtn>
+          )}
         </S.ChatWindowFooterPos>
       </S.ChatWindowFooter>
     </S.ChatWindow>

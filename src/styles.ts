@@ -23,7 +23,7 @@ export const SideBar = styled.div`
   max-width: 415px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid ${Colors.gray};
 `;
 
 export const ContentArea = styled.div`
@@ -40,7 +40,7 @@ export const Header = styled.header`
 
 export const ChatList = styled.div`
   flex: 1;
-  background-color: #fff;
+  background-color: ${Colors.white};
   overflow-y: auto;
 
   &::-webkit-scrollbar {
@@ -76,7 +76,7 @@ export const HeaderBtn = styled.div`
 
 export const Search = styled.div`
   background-color: ${Colors.backgroundColorSearch};
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid ${Colors.graySearch};
   padding: 5px 15px;
 `;
 

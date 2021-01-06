@@ -7,6 +7,7 @@ import ChatListItem from "./components/ChatList/ChatListItem";
 import ChatIntro from "./components/ChatIntro/ChatIntro";
 import ChatWindow from "./components/ChatWindow/ChatWindow";
 
+//Material Icons
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -16,25 +17,26 @@ export const App = () => {
   const [chatList, setChatList] = useState<any>([
     {
       chatId: 1,
-      title: "fulano de tal1",
+      title: "John Lennon ",
       avatar: "https://www.w3schools.com/howto/img_avatar2.png",
     },
     {
       chatId: 2,
-      title: "fulano de tal2",
+      title: "Paul McCartney",
       avatar: "https://www.w3schools.com/howto/img_avatar2.png",
     },
     {
       chatId: 3,
-      title: "fulano de tal3",
+      title: "Ringo Starr",
       avatar: "https://www.w3schools.com/howto/img_avatar2.png",
     },
     {
       chatId: 4,
-      title: "fulano de tal4",
+      title: "George Harrison",
       avatar: "https://www.w3schools.com/howto/img_avatar2.png",
     },
   ]);
+
   const [activeChat, setActiveChat] = useState<any>({});
 
   return (
