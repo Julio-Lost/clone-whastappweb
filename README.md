@@ -1,51 +1,37 @@
-# Getting Started with Create React App
+# Clone WhatsApp Web
 
-#Whatsapp Web Clone
-Esse projeto foi feito com o intuito de aprendizado, utilizando React.
+Clone da tela principal do WhatsApp Web.
 
-Nesse projeto foi utilizado os seguintes pacotes: Material-Ui, Emoji-picker-react e Styled Components.
+## Características
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O projeto consiste em demonstrar a página de entrada e conversa do WhatsApp Web e algumas interações dos componentes com a página web.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+O projeto conta com a página de `Entrada` e `Conversa` do sistema, segue abaixo a demostração das funcionalidades adicionadas.
 
-### `yarn start`
+<div>
+  <p align="center">
+    <img src="http://g.recordit.co/zxbnGSmfJE.gif" alt="Pagina principal" height="325">
+  </p>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Técnologias utilizadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React](https://github.com/facebook/react)
+- [Visual Studio Code](https://github.com/Microsoft/vscode)
+- [MaterialUi](https://github.com/mui-org/material-ui)
+- [Styled-Components](https://github.com/styled-components/styled-components)
+- [Emoji-Picker-React](https://github.com/ealush/emoji-picker-react#readme)
 
-### `yarn test`
+## Rodando a aplicação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clone este respositório com o comando: \$git clone https://github.com/Julio-Lost/whatsappwebclone.git
 
-### `yarn build`
+- Ou faça o Fork para o seu github e clone.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tenha o NPM ou Yarn instalados.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Instale as dependências do projeto com o comando `npm install` ou `yarn install`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Após instalado as dependências execute o comando `yarn start` ou `npm start`.
