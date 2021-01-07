@@ -1,6 +1,6 @@
 # Clone WhatsApp Web
 
-Clone da tela principal do WhatsApp Web.
+Clone da tela de entrada e de conversa do WhatsApp Web.
 
 ## Características
 
