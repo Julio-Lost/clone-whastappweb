@@ -59,6 +59,16 @@ export const ChatWindowBody = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  padding: 20px 30px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const ChatWindowEmojiArea = styled.div<{ emojiOpen: boolean }>`

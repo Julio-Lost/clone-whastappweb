@@ -18,7 +18,7 @@ export const ChatLisItem = ({ onClick, active, data }: ChatListItemProps) => {
         </S.ChatLisItemtLine>
         <S.ChatLisItemtLine>
           <S.ChatListItemLastMsg>
-            <S.ChatListItemLastMsgP>Hello!</S.ChatListItemLastMsgP>
+            <S.ChatListItemLastMsgP>bla bla bla</S.ChatListItemLastMsgP>
           </S.ChatListItemLastMsg>
         </S.ChatLisItemtLine>
       </S.ChatListItemLines>

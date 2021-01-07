@@ -19,4 +19,5 @@ export const Colors = {
   grayChatWindowBody: "#E5DDD5",
   grayFooter: "#4A4A4A",
   micActiveColor: "#126ECE",
+  mytextColor: "#DCF8C6",
 };
