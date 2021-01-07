@@ -3,6 +3,7 @@ import * as S from "./styles";
 import { Colors } from "../../constants";
 
 import EmojiPicker, { IEmojiData } from "emoji-picker-react";
+
 import SearchIcon from "@material-ui/icons/Search";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -168,7 +169,6 @@ export const ChatWindow = (props: ChatWindoProps) => {
           },
         }}
       >
-        {" "}
         {options.map((option) => (
           <MenuItem
             key={option}

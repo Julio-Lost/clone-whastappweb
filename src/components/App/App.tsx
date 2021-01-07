@@ -1,17 +1,17 @@
-import ChatIcon from "@material-ui/icons/Chat";
 //Material Icons
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import React, { useState } from "react";
-import ChatIntro from "./components/ChatIntro/ChatIntro";
+import ChatIntro from "../ChatIntro/ChatIntro";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import ChatIcon from "@material-ui/icons/Chat";
 
 //local components
-import ChatListItem from "./components/ChatList/ChatListItem";
-import ChatWindow from "./components/ChatWindow/ChatWindow";
-import { Colors } from "./constants";
+import ChatListItem from "../ChatList/ChatListItem";
+import ChatWindow from "../ChatWindow/ChatWindow";
+import { Colors } from "../../constants";
 import * as S from "./styles";
 
 const options = [
@@ -139,34 +139,36 @@ export const App = () => {
               <MoreVertIcon style={{ color: Colors.colorIcons }} />
             </S.HeaderBtn>
           </S.HeaderButton>
-          <Menu
-            id="long-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={open}
-            onClose={handleClose}
-            PaperProps={{
-              style: {
-                maxHeight: ITEM_HEIGHT * 4.5,
-                width: "15ch",
-                marginTop: 35,
-              },
-            }}
-          >
-            {" "}
-            {options.map((option) => (
-              <MenuItem
-                key={option}
-                selected={option === "Pyxis"}
-                style={{ fontSize: 14 }}
-                onClick={handleClose}
-              >
-                {option}
-              </MenuItem>
-            ))}
-          </Menu>
         </S.Header>
-
+        <Menu
+          id="long-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={open}
+          onClose={handleClose}
+          getContentAnchorEl={null}
+          anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          transformOrigin={{ vertical: "top", horizontal: "right" }}
+          PaperProps={{
+            style: {
+              maxHeight: ITEM_HEIGHT * 4.5,
+              width: "18ch",
+              marginTop: 35,
+            },
+          }}
+        >
+          {" "}
+          {options.map((option) => (
+            <MenuItem
+              key={option}
+              selected={option === "Pyxis"}
+              style={{ fontSize: 14 }}
+              onClick={handleClose}
+            >
+              {option}
+            </MenuItem>
+          ))}
+        </Menu>
         <S.Search>
           <S.SearchInput>
             <SearchIcon fontSize="small" style={{ color: Colors.colorIcons }} />
