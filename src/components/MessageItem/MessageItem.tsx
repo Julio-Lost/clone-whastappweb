@@ -1,15 +1,11 @@
 import React from "react";
 import { Colors } from "../../constants";
+import { IList } from "../../models/list";
 import { IUser } from "../../models/user";
 import * as S from "./styles";
 
-interface ListProps {
-  id: number;
-  body: string;
-}
-
 interface MessageItemProps {
-  data: ListProps;
+  data: IList;
   user: IUser;
 }
 

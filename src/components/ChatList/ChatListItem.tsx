@@ -1,16 +1,11 @@
 import React from "react";
+import { IChatList } from "../../models/chatList";
 import * as S from "./styles";
-
-interface ChatList {
-  chatId: number;
-  title: string;
-  avatar: string;
-}
 
 interface ChatListItemProps {
   onClick: () => void;
   active: boolean;
-  data: ChatList;
+  data: IChatList;
 }
 
 export const ChatLisItem = ({ onClick, active, data }: ChatListItemProps) => {

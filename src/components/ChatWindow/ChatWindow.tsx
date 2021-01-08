@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as S from "./styles";
 import { Colors } from "../../constants";
+import { IUser } from "../../models/user";
+import { IList } from "../../models/list";
 
 import EmojiPicker, { IEmojiData } from "emoji-picker-react";
 
@@ -14,8 +16,6 @@ import MicIcon from "@material-ui/icons/Mic";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
-import { IUser } from "../../models/user";
-
 //import local component
 import MessageItem from "../MessageItem/MessageItem";
 
@@ -25,13 +25,8 @@ declare global {
   }
 }
 
-interface ChatWindoProps {
+interface IChatWindowProps {
   user: IUser;
-}
-
-interface ListProps {
-  id: number;
-  body: string;
 }
 
 const options = [
@@ -42,14 +37,14 @@ const options = [
   "Apagar conversa",
 ];
 
-export const ChatWindow = (props: ChatWindoProps) => {
+export const ChatWindow = (props: IChatWindowProps) => {
   const [emojiOpen, setEmojiOpen] = useState<boolean>(false);
   const [text, setText] = useState("");
   const [listening, setListening] = useState<boolean>(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const [list] = useState<ListProps[]>([
+  const [list] = useState<IList[]>([
     { id: props.user.id, body: props.user.message },
     { id: 1, body: "bla bla bla" },
     { id: 1, body: props.user.message },

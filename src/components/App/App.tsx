@@ -13,12 +13,7 @@ import ChatListItem from "../ChatList/ChatListItem";
 import ChatWindow from "../ChatWindow/ChatWindow";
 import { Colors } from "../../constants";
 import * as S from "./styles";
-
-interface ChatList {
-  chatId: number;
-  title: string;
-  avatar: string;
-}
+import { IChatList } from "../../models/chatList";
 
 const options = [
   "Novo grupo",
@@ -106,7 +101,7 @@ export const App = () => {
     },
   ];
 
-  const [activeChat, setActiveChat] = useState<ChatList>({} as ChatList);
+  const [activeChat, setActiveChat] = useState<IChatList>({} as IChatList);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -185,7 +180,7 @@ export const App = () => {
           </S.SearchInput>
         </S.Search>
         <S.ChatList>
-          {chatList.map((item: ChatList, key: any) => (
+          {chatList.map((item: IChatList, key: any) => (
             <ChatListItem
               key={key}
               data={item}
