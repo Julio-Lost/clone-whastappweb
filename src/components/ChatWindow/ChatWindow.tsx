@@ -21,7 +21,7 @@ import MessageItem from "../MessageItem/MessageItem";
 
 declare global {
   interface Window {
-    webkitSpeechRecognition: any;
+    webkitSpeechRecognition: SpeechRecognition;
   }
 }
 
@@ -99,7 +99,7 @@ export const ChatWindow = (props: ChatWindoProps) => {
     recognition = new SpeechRecognition();
   }
 
-  const handleEmojiClick = (e: any, emojiData: IEmojiData) => {
+  const handleEmojiClick = (e: MouseEvent, emojiData: IEmojiData) => {
     setText(text + emojiData.emoji);
   };
 

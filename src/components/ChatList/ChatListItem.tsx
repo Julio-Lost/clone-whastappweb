@@ -1,10 +1,16 @@
 import React from "react";
 import * as S from "./styles";
 
+interface ChatList {
+  chatId: number;
+  title: string;
+  avatar: string;
+}
+
 interface ChatListItemProps {
-  onClick: any;
+  onClick: () => void;
   active: boolean;
-  data: any;
+  data: ChatList;
 }
 
 export const ChatLisItem = ({ onClick, active, data }: ChatListItemProps) => {
