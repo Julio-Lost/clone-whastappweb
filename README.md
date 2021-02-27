@@ -12,7 +12,7 @@ O projeto conta com a página de `Entrada` e `Conversa` do sistema, segue abaixo
 
 <div>
   <p align="center">
-    <img src="http://g.recordit.co/zxbnGSmfJE.gif" alt="Pagina principal" height="325">
+    <img src="https://i.ibb.co/KWf2TNC/Captura-de-tela-de-2021-02-27-03-39-25.png" alt="Swagger" height="325">
   </p>
 </div>
 
